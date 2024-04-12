@@ -53,9 +53,8 @@ public class CollectionsMethods {
     public static void countDuplicates(List<String> strings) {
         Map<String, Integer> wordCountMap = countKeysDuplicates(strings);
 
-        for (String word : wordCountMap.keySet()) {
-            int count = wordCountMap.get(word);
-            System.out.println(word + ": " + count);
+        for (Map.Entry<String, Integer> entry : wordCountMap.entrySet()) {
+            System.out.println(entry);
         }
     }
 }
